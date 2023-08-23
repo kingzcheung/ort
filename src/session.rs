@@ -553,7 +553,7 @@ impl Drop for SessionPointerHolder {
 }
 
 /// Type storing the session information, built from an [`Environment`](environment/struct.Environment.html)
-#[derive(Debug)]
+#[derive(Debug,Clone)]
 pub struct Session {
 	#[allow(dead_code)]
 	env: Arc<Environment>,
