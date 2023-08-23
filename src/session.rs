@@ -579,7 +579,7 @@ impl<'s> Deref for InMemorySession<'s> {
 }
 
 /// Information about an ONNX's input as stored in loaded file
-#[derive(Debug)]
+#[derive(Debug,Clone)]
 pub struct Input {
 	/// Name of the input layer
 	pub name: String,
@@ -592,7 +592,7 @@ pub struct Input {
 }
 
 /// Information about an ONNX's output as stored in loaded file
-#[derive(Debug)]
+#[derive(Debug,Clone)]
 pub struct Output {
 	/// Name of the output layer
 	pub name: String,
